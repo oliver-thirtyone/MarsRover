@@ -33,5 +33,20 @@ namespace MarsRover
             Assert.That(rover.PositionX, Is.EqualTo(endPosition[0]));
             Assert.That(rover.PositionY, Is.EqualTo(endPosition[1]));
         }
+        
+        [TestCase('N', 'W')]
+        [TestCase('W', 'S')]
+        [TestCase('S', 'E')]
+        [TestCase('E', 'N')]
+        public void TurnRoverLeftWhenFacingGivenDirection(char startDirection, char endDirection)
+        {
+            var rover = new Rover(startDirection, positionX: 13, positionY: 37);
+
+            rover.Move("l");
+            
+            Assert.That(rover.Direction, Is.EqualTo(endDirection));
+            Assert.That(rover.PositionX, Is.EqualTo(13));
+            Assert.That(rover.PositionY, Is.EqualTo(37));
+        }
     }
 }
