@@ -17,17 +17,17 @@
         {
             foreach (var instruction in instructions)
             {
-                if (instructions == "f")
+                if (instruction == 'f')
                 {
                     if (Direction == 'N')
                     {
                         PositionY++;
                     }
-                    if (Direction == 'S')
+                    else if (Direction == 'S')
                     {
                         PositionY--;
                     }
-                    if (Direction == 'E')
+                    else if (Direction == 'E')
                     {
                         PositionX++;
                     }
