@@ -66,6 +66,17 @@
                         _ => Direction
                     };
                 }
+                else if (instruction == 'r')
+                {
+                    Direction = Direction switch
+                    {
+                        'N' => 'E',
+                        'S' => 'W',
+                        'E' => 'S',
+                        'W' => 'N',
+                        _ => Direction
+                    };
+                }
             }
         }
     }
