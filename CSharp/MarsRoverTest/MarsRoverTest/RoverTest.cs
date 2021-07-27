@@ -4,16 +4,16 @@ namespace MarsRover
 {
     public class RoverTest
     {
-        [Test]
-        public void MoveRoverForwardWhenFacingNorth()
+        [TestCase('N', new[] {5, 5}, new[] {5, 6})]
+        public void MoveRoverForwardWhenFacingGivenDirection(char startDirection, int[] startPosition, int[] endPosition)
         {
-            var rover = new Rover(direction: 'N', positionX: 5, positionY: 5);
+            var rover = new Rover(startDirection, startPosition[0], startPosition[1]);
 
             rover.Move("f");
             
-            Assert.That(rover.Direction, Is.EqualTo('N'));
-            Assert.That(rover.PositionX, Is.EqualTo(5));
-            Assert.That(rover.PositionY, Is.EqualTo(6));
+            Assert.That(rover.Direction, Is.EqualTo(startDirection));
+            Assert.That(rover.PositionX, Is.EqualTo(endPosition[0]));
+            Assert.That(rover.PositionY, Is.EqualTo(endPosition[1]));
         }
     }
 }
