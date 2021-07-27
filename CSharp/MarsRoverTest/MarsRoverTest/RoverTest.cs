@@ -5,6 +5,7 @@ namespace MarsRover
     public class RoverTest
     {
         [TestCase('N', new[] {5, 5}, new[] {5, 6})]
+        [TestCase('S', new[] {5, 5}, new[] {5, 4})]
         public void MoveRoverForwardWhenFacingGivenDirection(char startDirection, int[] startPosition, int[] endPosition)
         {
             var rover = new Rover(startDirection, startPosition[0], startPosition[1]);
