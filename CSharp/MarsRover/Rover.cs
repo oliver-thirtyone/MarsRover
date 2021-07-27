@@ -3,14 +3,15 @@
     public class Rover
     {
         public char Direction { get; private set; }
-        public int PositionX { get; private set; }
-        public int PositionY { get; private set; }
+        public int PositionX => position[0];
+        public int PositionY => position[1];
+
+        private int[] position;
 
         public Rover(char direction, int positionX, int positionY)
         {
             Direction = direction;
-            PositionX = positionX;
-            PositionY = positionY;
+            position = new[] {positionX, positionY};
         }
 
         public void Go(string instructions)
@@ -21,38 +22,38 @@
                 {
                     if (Direction == 'N')
                     {
-                        PositionY++;
+                        position = new[] {position[0], position[1] + 1};
                     }
                     else if (Direction == 'S')
                     {
-                        PositionY--;
+                        position = new[] {position[0], position[1] - 1};
                     }
                     else if (Direction == 'E')
                     {
-                        PositionX++;
+                        position = new[] {position[0] + 1, position[1]};
                     }
                     else if (Direction == 'W')
                     {
-                        PositionX--;
+                        position = new[] {position[0] - 1, position[1]};
                     }
                 }
                 else if (instruction == 'b')
                 {
                     if (Direction == 'N')
                     {
-                        PositionY--;
+                        position = new[] {position[0], position[1] - 1};
                     }
                     else if (Direction == 'S')
                     {
-                        PositionY++;
+                        position = new[] {position[0], position[1] + 1};
                     }
                     else if (Direction == 'E')
                     {
-                        PositionX--;
+                        position = new[] {position[0] - 1, position[1]};
                     }
                     else if (Direction == 'W')
                     {
-                        PositionX++;
+                        position = new[] {position[0] + 1, position[1]};
                     }
                 }
                 else if (instruction == 'l')
