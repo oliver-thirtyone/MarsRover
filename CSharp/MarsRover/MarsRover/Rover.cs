@@ -2,7 +2,7 @@
 {
     public class Rover
     {
-        public char Direction { get; }
+        public char Direction { get; private set; }
         public int PositionX { get; private set; }
         public int PositionY { get; private set; }
 
@@ -53,6 +53,25 @@
                     else if (Direction == 'W')
                     {
                         PositionX++;
+                    }
+                }
+                else if (instruction == 'l')
+                {
+                    if (Direction == 'N')
+                    {
+                        Direction = 'W';
+                    }
+                    else if (Direction == 'S')
+                    {
+                        Direction = 'E';
+                    }
+                    else if (Direction == 'E')
+                    {
+                        Direction = 'N';
+                    }
+                    else if (Direction == 'W')
+                    {
+                        Direction = 'S';
                     }
                 }
             }
