@@ -28,10 +28,6 @@ namespace MarsRover
             var rover = new Rover(startDirection, positionX: startPosition[0], positionY: startPosition[1]);
 
             rover.Go(instructions: "b");
-
-            Assert.That(rover.Direction, Is.EqualTo(startDirection));
-            Assert.That(rover.PositionX, Is.EqualTo(endPosition[0]));
-            Assert.That(rover.PositionY, Is.EqualTo(endPosition[1]));
         }
 
         [TestCase('N', 'W')]
