@@ -15,7 +15,20 @@
 
         public void Move(string instructions)
         {
-            PositionY++;
+            foreach (var instruction in instructions)
+            {
+                if (instructions == "f")
+                {
+                    if (Direction == 'N')
+                    {
+                        PositionY++;
+                    }
+                    if (Direction == 'S')
+                    {
+                        PositionY--;
+                    }
+                }
+            }
         }
     }
 }
