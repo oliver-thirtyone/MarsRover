@@ -2,15 +2,16 @@
 {
     public class Rover
     {
-        public char Direction { get; private set; }
+        public char Direction => direction[0];
         public int PositionX => position[0];
         public int PositionY => position[1];
 
+        private string direction;
         private int[] position;
 
         public Rover(char direction, int positionX, int positionY)
         {
-            Direction = direction;
+            this.direction = direction.ToString();
             position = new[] {positionX, positionY};
         }
 
@@ -58,40 +59,40 @@
                 }
                 else if (instruction == 'l')
                 {
-                    if (Direction == 'N')
+                    if (direction == "N")
                     {
-                        Direction = 'W';
+                        direction = "W";
                     }
-                    else if (Direction == 'S')
+                    else if (direction == "S")
                     {
-                        Direction = 'E';
+                        direction = "E";
                     }
-                    else if (Direction == 'E')
+                    else if (direction == "E")
                     {
-                        Direction = 'N';
+                        direction = "N";
                     }
-                    else if (Direction == 'W')
+                    else if (direction == "W")
                     {
-                        Direction = 'S';
+                        direction = "S";
                     }
                 }
                 else if (instruction == 'r')
                 {
-                    if (Direction == 'N')
+                    if (direction == "N")
                     {
-                        Direction = 'E';
+                        direction = "E";
                     }
-                    else if (Direction == 'S')
+                    else if (direction == "S")
                     {
-                        Direction = 'W';
+                        direction = "W";
                     }
-                    else if (Direction == 'E')
+                    else if (direction == "E")
                     {
-                        Direction = 'S';
+                        direction = "S";
                     }
-                    else if (Direction == 'W')
+                    else if (direction == "W")
                     {
-                        Direction = 'N';
+                        direction = "N";
                     }
                 }
             }
