@@ -21,76 +21,97 @@
             {
                 if (instruction == 'f')
                 {
-                    if (Direction == 'N')
+                    if (direction == "N")
                     {
                         position = new[] {position[0], position[1] + 1};
                     }
-                    else if (Direction == 'S')
+
+                    if (direction == "S")
                     {
                         position = new[] {position[0], position[1] - 1};
                     }
-                    else if (Direction == 'E')
+
+                    if (direction == "E")
                     {
                         position = new[] {position[0] + 1, position[1]};
                     }
-                    else if (Direction == 'W')
+
+                    if (direction == "W")
                     {
                         position = new[] {position[0] - 1, position[1]};
                     }
                 }
-                else if (instruction == 'b')
+
+                if (instruction == 'b')
                 {
-                    if (Direction == 'N')
+                    if (direction == "N")
                     {
                         position = new[] {position[0], position[1] - 1};
                     }
-                    else if (Direction == 'S')
+
+                    if (direction == "S")
                     {
                         position = new[] {position[0], position[1] + 1};
                     }
-                    else if (Direction == 'E')
+
+                    if (direction == "E")
                     {
                         position = new[] {position[0] - 1, position[1]};
                     }
-                    else if (Direction == 'W')
+
+                    if (direction == "W")
                     {
                         position = new[] {position[0] + 1, position[1]};
                     }
                 }
-                else if (instruction == 'l')
+
+                if (instruction == 'l')
                 {
                     if (direction == "N")
                     {
                         direction = "W";
+                        continue;
                     }
-                    else if (direction == "S")
+
+                    if (direction == "S")
                     {
                         direction = "E";
+                        continue;
                     }
-                    else if (direction == "E")
+
+                    if (direction == "E")
                     {
                         direction = "N";
+                        continue;
                     }
-                    else if (direction == "W")
+
+                    if (direction == "W")
                     {
                         direction = "S";
                     }
                 }
-                else if (instruction == 'r')
+
+                if (instruction == 'r')
                 {
                     if (direction == "N")
                     {
                         direction = "E";
+                        continue;
                     }
-                    else if (direction == "S")
+
+                    if (direction == "S")
                     {
                         direction = "W";
+                        continue;
                     }
-                    else if (direction == "E")
+
+                    if (direction == "E")
                     {
                         direction = "S";
+                        continue;
                     }
-                    else if (direction == "W")
+
+                    if (direction == "W")
                     {
                         direction = "N";
                     }
