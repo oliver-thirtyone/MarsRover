@@ -13,7 +13,7 @@
             PositionY = positionY;
         }
 
-        public void Move(string instructions)
+        public void Go(string instructions)
         {
             foreach (var instruction in instructions)
             {

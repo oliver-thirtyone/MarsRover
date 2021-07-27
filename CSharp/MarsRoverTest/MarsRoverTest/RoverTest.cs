@@ -12,7 +12,7 @@ namespace MarsRover
         {
             var rover = new Rover(startDirection, positionX: startPosition[0], positionY: startPosition[1]);
 
-            rover.Move("f");
+            rover.Go(instructions: "f");
             
             Assert.That(rover.Direction, Is.EqualTo(startDirection));
             Assert.That(rover.PositionX, Is.EqualTo(endPosition[0]));
@@ -27,7 +27,7 @@ namespace MarsRover
         {
             var rover = new Rover(startDirection, positionX: startPosition[0], positionY: startPosition[1]);
 
-            rover.Move("b");
+            rover.Go(instructions: "b");
             
             Assert.That(rover.Direction, Is.EqualTo(startDirection));
             Assert.That(rover.PositionX, Is.EqualTo(endPosition[0]));
@@ -42,7 +42,7 @@ namespace MarsRover
         {
             var rover = new Rover(startDirection, positionX: 13, positionY: 37);
 
-            rover.Move("l");
+            rover.Go(instructions: "l");
             
             Assert.That(rover.Direction, Is.EqualTo(endDirection));
             Assert.That(rover.PositionX, Is.EqualTo(13));
@@ -57,7 +57,7 @@ namespace MarsRover
         {
             var rover = new Rover(startDirection, positionX: 6, positionY: 9);
 
-            rover.Move("r");
+            rover.Go(instructions: "r");
             
             Assert.That(rover.Direction, Is.EqualTo(endDirection));
             Assert.That(rover.PositionX, Is.EqualTo(6));
