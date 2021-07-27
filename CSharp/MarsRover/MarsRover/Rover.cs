@@ -4,7 +4,7 @@
     {
         public char Direction { get; }
         public int PositionX { get; }
-        public int PositionY { get; }
+        public int PositionY { get; private set; }
 
         public Rover(char direction, int positionX, int positionY)
         {
@@ -15,7 +15,7 @@
 
         public void Move(string instructions)
         {
-            throw new System.NotImplementedException();
+            PositionY++;
         }
     }
 }
