@@ -57,22 +57,14 @@
                 }
                 else if (instruction == 'l')
                 {
-                    if (Direction == 'N')
+                    Direction = Direction switch
                     {
-                        Direction = 'W';
-                    }
-                    else if (Direction == 'S')
-                    {
-                        Direction = 'E';
-                    }
-                    else if (Direction == 'E')
-                    {
-                        Direction = 'N';
-                    }
-                    else if (Direction == 'W')
-                    {
-                        Direction = 'S';
-                    }
+                        'N' => 'W',
+                        'S' => 'E',
+                        'E' => 'N',
+                        'W' => 'S',
+                        _ => Direction
+                    };
                 }
             }
         }
