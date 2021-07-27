@@ -3,7 +3,7 @@
     public class Rover
     {
         public char Direction { get; }
-        public int PositionX { get; }
+        public int PositionX { get; private set; }
         public int PositionY { get; private set; }
 
         public Rover(char direction, int positionX, int positionY)
@@ -26,6 +26,10 @@
                     if (Direction == 'S')
                     {
                         PositionY--;
+                    }
+                    if (Direction == 'E')
+                    {
+                        PositionX++;
                     }
                 }
             }
