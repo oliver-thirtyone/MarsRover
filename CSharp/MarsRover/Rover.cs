@@ -57,23 +57,41 @@
                 }
                 else if (instruction == 'l')
                 {
-                    Direction = Direction switch
+                    if (Direction == 'N')
                     {
-                        'N' => 'W',
-                        'S' => 'E',
-                        'E' => 'N',
-                        'W' => 'S'
-                    };
+                        Direction = 'W';
+                    }
+                    else if (Direction == 'S')
+                    {
+                        Direction = 'E';
+                    }
+                    else if (Direction == 'E')
+                    {
+                        Direction = 'N';
+                    }
+                    else if (Direction == 'W')
+                    {
+                        Direction = 'S';
+                    }
                 }
                 else if (instruction == 'r')
                 {
-                    Direction = Direction switch
+                    if (Direction == 'N')
                     {
-                        'N' => 'E',
-                        'S' => 'W',
-                        'E' => 'S',
-                        'W' => 'N'
-                    };
+                        Direction = 'E';
+                    }
+                    else if (Direction == 'S')
+                    {
+                        Direction = 'W';
+                    }
+                    else if (Direction == 'E')
+                    {
+                        Direction = 'S';
+                    }
+                    else if (Direction == 'W')
+                    {
+                        Direction = 'N';
+                    }
                 }
             }
         }
