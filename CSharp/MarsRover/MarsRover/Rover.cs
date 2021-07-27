@@ -62,8 +62,7 @@
                         'N' => 'W',
                         'S' => 'E',
                         'E' => 'N',
-                        'W' => 'S',
-                        _ => Direction
+                        'W' => 'S'
                     };
                 }
                 else if (instruction == 'r')
@@ -73,8 +72,7 @@
                         'N' => 'E',
                         'S' => 'W',
                         'E' => 'S',
-                        'W' => 'N',
-                        _ => Direction
+                        'W' => 'N'
                     };
                 }
             }
