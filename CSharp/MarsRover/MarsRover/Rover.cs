@@ -36,6 +36,25 @@
                         PositionX--;
                     }
                 }
+                else if (instruction == 'b')
+                {
+                    if (Direction == 'N')
+                    {
+                        PositionY--;
+                    }
+                    else if (Direction == 'S')
+                    {
+                        PositionY++;
+                    }
+                    else if (Direction == 'E')
+                    {
+                        PositionX--;
+                    }
+                    else if (Direction == 'W')
+                    {
+                        PositionX++;
+                    }
+                }
             }
         }
     }
