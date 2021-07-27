@@ -31,6 +31,10 @@
                     {
                         PositionX++;
                     }
+                    else if (Direction == 'W')
+                    {
+                        PositionX--;
+                    }
                 }
             }
         }
