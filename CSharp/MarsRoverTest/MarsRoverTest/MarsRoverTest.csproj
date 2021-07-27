@@ -18,4 +18,10 @@
       <ProjectReference Include="..\..\MarsRover\MarsRover\MarsRover.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Include="..\..\..\README.MD">
+        <Link>README.MD</Link>
+      </Content>
+    </ItemGroup>
+
 </Project>
