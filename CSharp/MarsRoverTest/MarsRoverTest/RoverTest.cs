@@ -7,7 +7,7 @@ namespace MarsRover
         [Test]
         public void Test1()
         {
-            var marsRover = new Rover();
+            var rover = new Rover();
             Assert.Pass();
         }
     }
