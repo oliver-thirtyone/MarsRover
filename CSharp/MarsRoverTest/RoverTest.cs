@@ -66,7 +66,7 @@ namespace MarsRover
             var rover = new Rover(direction: 'N', positionX: 5, positionY: 5);
 
             // N/5/5 -[f]-> N/5/6 -[r]-> E/5/6 -[b]-> E/4/6 -[b]-> E/3/6 -[l]-> N/3/6 -[f]-> N/3/7 -[l]-> W/3/7
-            rover.Go("frbblfl");
+            rover.Go(instructions: "frbblfl");
 
             Assert.That(rover.Direction, Is.EqualTo('W'));
             Assert.That(rover.PositionX, Is.EqualTo(3));
